@@ -1,3 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, HttpResponse
+import json
 
-# Create your views here.
+user_dict = {
+    'username': 'zhu',
+    'sex': 'male',
+    'age': 18
+}
+
+
+def userList(request):
+    return HttpResponse(json.dumps(user_dict), content_type='application/json')
