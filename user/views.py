@@ -1,6 +1,6 @@
 from .models import Post, User, Topic
 from .serializers import PostSerializer, UserSerializer, TopicSerializer
-from rest_framework import viewsets, renderers
+from rest_framework import viewsets, permissions, serializers, settings
 
 
 class PostViewSet(viewsets.ModelViewSet):
