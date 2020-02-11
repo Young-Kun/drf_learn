@@ -5,8 +5,7 @@ from .models import Post, User, Topic
 class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
-        fields = ['id', 'title', 'content', 'created', 'user', 'topics']
-        depth = 1
+        fields = ('id', 'title', 'content', 'created', 'user', 'topics')
 
 
 class UserSerializer(serializers.ModelSerializer):
